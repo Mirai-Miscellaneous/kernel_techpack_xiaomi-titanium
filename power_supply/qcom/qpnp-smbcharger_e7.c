@@ -2668,10 +2668,10 @@ static int smbchg_system_temp_level_set(struct smbchg_chip *chip,
 			pr_err("Couldn't disable DC thermal ICL vote rc=%d\n",
 				rc);
 	} else {
-		if( hvdcp_type == POWER_SUPPLY_TYPE_USB_HVDCP || hvdcp_type == POWER_SUPPLY_TYPE_USB_HVDCP_3){
+		if (chip->usb_supply_type == POWER_SUPPLY_TYPE_USB_HVDCP || chip->usb_supply_type == POWER_SUPPLY_TYPE_USB_HVDCP_3){
 		thermal_icl_ma =
 			(int)hvdcp_thermal_mitigation[chip->therm_lvl_sel];
-		} else{
+		} else {
 		thermal_icl_ma =
 			(int)chip->thermal_mitigation[chip->therm_lvl_sel];
 		}
