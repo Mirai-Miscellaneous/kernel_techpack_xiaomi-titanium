@@ -1,6 +1,5 @@
-
 qcom,3005040_huaqin_e7sun_4000mah_averaged_masterslave_jul17th2017 {
-	qcom,max-voltage-uv = <4500000>;
+	qcom,max-voltage-uv = <4380000>;
 	qcom,nom-batt-capacity-mah = <4000>;
 	qcom,batt-id-kohm = <40>;
 	qcom,battery-beta = <3380>;
