@@ -6355,13 +6355,13 @@ static int fg_batt_profile_init(struct fg_chip *chip)
 
 	int i;
 	int batts_id_ohm[3] = {24000,40000, 50000};
-	int delta = 0, limit = 0,batt_id = 0, match = 0, id_range_pct = 5;
+	int delta = 0, limit = 0, vince_batt_id = 0, match = 0, id_range_pct = 5;
 	bool in_range = false;
 
-	batt_id = get_sram_prop_now(chip, FG_DATA_BATT_ID);
-	printk("batt_id_ohm=%d\n",batt_id);
+	vince_batt_id = get_sram_prop_now(chip, FG_DATA_BATT_ID);
+	printk("batt_id_ohm=%d\n",vince_batt_id);
 	for (i = 0; i < 3; i++) {
-	delta = abs(batts_id_ohm[i] - batt_id);
+	delta = abs(batts_id_ohm[i] - vince_batt_id);
 	printk("delta=%d\n",delta);
 	limit = (batts_id_ohm[i] * id_range_pct / 100);
 	if (batts_id_ohm[i] == 24000)
