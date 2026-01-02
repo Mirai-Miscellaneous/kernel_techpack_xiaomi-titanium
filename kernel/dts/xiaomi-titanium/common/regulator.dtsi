@@ -10,10 +10,4 @@
             regulator-always-on;
 		};
 	};
-
-	rpm-regulator-ldoa22 {
-		pm8953_l22: regulator-l22 {
-			regulator-max-microvolt = <2800000>;
-		};
-	};
 };
